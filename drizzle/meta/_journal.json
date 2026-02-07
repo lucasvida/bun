@@ -8,6 +8,20 @@
       "when": 1770411570535,
       "tag": "0000_swift_cobalt_man",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1770428507571,
+      "tag": "0001_wide_the_call",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1770428586213,
+      "tag": "0002_illegal_molten_man",
+      "breakpoints": true
     }
   ]
 }

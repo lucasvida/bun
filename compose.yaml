@@ -5,10 +5,11 @@ services:
     environment:
       POSTGRES_USER: docker
       POSTGRES_PASSWORD: docker
-      POSTGRES_DB:  pizzashop
+      POSTGRES_DB: pizzashop
+      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/bitnami/postgresql
+      - postgres_data:/var/lib/postgresql/data
 volumes:
   postgres_data:
