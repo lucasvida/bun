@@ -1,15 +1,19 @@
 name: bun
 services:
   postgres:
-    image: bitnami/postgresql:latest
+    image: postgres:17
     environment:
       POSTGRES_USER: docker
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: pizzashop
-      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docker -d pizzashop"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 volumes:
   postgres_data:
